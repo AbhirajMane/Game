@@ -1,0 +1,54 @@
+code
+#include <stdio.h>
+#include<stdlib.h>
+#include<time.h>
+int main()
+{
+    int turn,comp,stone,paper,scissor,user,result;
+    srand(time(NULL));
+    turn= rand()% 3;
+    printf("Comp's turn: ");
+    if(turn==0)
+    {
+        comp=stone;
+    }
+    else if(turn==1)
+    {
+        comp=paper;
+    }
+    else if(turn==2)
+    {
+        comp=scissor;
+    }
+    printf("\n\nPlayer's turn: ");
+    scanf("%d",&user);
+    if(user==stone && comp==scissor)
+    {
+        printf("You won %d",result);
+    }
+    else if(user==stone && comp==paper)
+    {
+        printf("You lose %d",result);
+    }
+    else if(user==paper && comp==stone)
+    {
+        printf("You won %d",result);
+    }
+    else if(user==paper && comp==scissor)
+    {
+        printf("You lose %d",result);
+    }
+    else if(user==scissor && comp==paper)
+    {
+        printf("You won %d",result);
+    }
+    else if(user==scissor && comp==stone)
+    {
+        printf("You lose %d",result);
+    }
+    else if(user==comp)
+    {
+        printf("Tie");
+    }
+    return 0;
+}
